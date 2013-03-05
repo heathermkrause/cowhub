@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130305005721) do
+ActiveRecord::Schema.define(:version => 20130305180935) do
 
   create_table "farmers", :force => true do |t|
     t.string   "name"
@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(:version => 20130305005721) do
     t.integer  "cbcount"
     t.integer  "lbcount"
     t.integer  "litres"
-    t.float    "fat"
-    t.float    "price"
-    t.float    "litconsume"
-    t.float    "litgive"
-    t.float    "litsell"
+    t.decimal  "fat"
+    t.decimal  "price"
+    t.decimal  "litconsume"
+    t.decimal  "litgive"
+    t.decimal  "litsell"
     t.integer  "farmer_id"
     t.string   "whoconsa"
     t.string   "whoconsb"

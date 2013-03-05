@@ -4,11 +4,11 @@ class CreateGpfs < ActiveRecord::Migration
       t.integer :cbcount
       t.integer :lbcount
       t.integer :litres
-      t.float :fat
-      t.float :price
-      t.float :litconsume
-      t.float :litgive
-      t.float :litsell
+      t.decimal :fat
+      t.decimal :price
+      t.decimal :litconsume
+      t.decimal :litgive
+      t.decimal :litsell
       t.integer :farmer_id
       t.string :whoconsa
       t.string :whoconsb
