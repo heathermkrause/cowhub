@@ -1,0 +1,45 @@
+<h1>Listing gpfs</h1>
+
+<table>
+  <tr>
+    <th>Cbcount</th>
+    <th>Lbcount</th>
+    <th>Litres</th>
+    <th>Fat</th>
+    <th>Price</th>
+    <th>Litconsume</th>
+    <th>Litgive</th>
+    <th>Litsell</th>
+    <th>Farmer</th>
+    <th>Whoconsa</th>
+    <th>Whoconsb</th>
+    <th>Wheresell</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gpfs.each do |gpf| %>
+  <tr>
+    <td><%= gpf.cbcount %></td>
+    <td><%= gpf.lbcount %></td>
+    <td><%= gpf.litres %></td>
+    <td><%= gpf.fat %></td>
+    <td><%= gpf.price %></td>
+    <td><%= gpf.litconsume %></td>
+    <td><%= gpf.litgive %></td>
+    <td><%= gpf.litsell %></td>
+    <td><%= gpf.farmer_id %></td>
+    <td><%= gpf.whoconsa %></td>
+    <td><%= gpf.whoconsb %></td>
+    <td><%= gpf.wheresell %></td>
+    <td><%= link_to 'Show', gpf %></td>
+    <td><%= link_to 'Edit', edit_gpf_path(gpf) %></td>
+    <td><%= link_to 'Destroy', gpf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gpf', new_gpf_path %>

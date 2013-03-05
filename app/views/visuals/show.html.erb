@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Vizname:</b>
+  <%= @visual.vizname %>
+</p>
+
+<p>
+  <b>Topic:</b>
+  <%= @visual.topic %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @visual.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_visual_path(@visual) %> |
+<%= link_to 'Back', visuals_path %>

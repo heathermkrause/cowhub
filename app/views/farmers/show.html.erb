@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @farmer.name %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%= @farmer.group_id %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @farmer.sex %>
+</p>
+
+
+<%= link_to 'Edit', edit_farmer_path(@farmer) %> |
+<%= link_to 'Back', farmers_path %>

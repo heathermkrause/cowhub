@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lgid: 1
+  phase: 1
+  district: MyString
+  upazilla: MyString
+  totalpart: 1
+  perfemale: 1
+
+two:
+  lgid: 1
+  phase: 1
+  district: MyString
+  upazilla: MyString
+  totalpart: 1
+  perfemale: 1

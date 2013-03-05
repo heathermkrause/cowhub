@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cbcount: 1
+  lbcount: 1
+  litres: 1
+  fat: 1.5
+  price: 1.5
+  litconsume: 1.5
+  litgive: 1.5
+  litsell: 1.5
+  farmer_id: 1
+  whoconsa: MyString
+  whoconsb: MyString
+  wheresell: MyString
+
+two:
+  cbcount: 1
+  lbcount: 1
+  litres: 1
+  fat: 1.5
+  price: 1.5
+  litconsume: 1.5
+  litgive: 1.5
+  litsell: 1.5
+  farmer_id: 1
+  whoconsa: MyString
+  whoconsb: MyString
+  wheresell: MyString

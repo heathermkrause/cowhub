@@ -1,0 +1,65 @@
+<%= form_for(@gpf) do |f| %>
+  <% if @gpf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gpf.errors.count, "error") %> prohibited this gpf from being saved:</h2>
+
+      <ul>
+      <% @gpf.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cbcount %><br />
+    <%= f.number_field :cbcount %>
+  </div>
+  <div class="field">
+    <%= f.label :lbcount %><br />
+    <%= f.number_field :lbcount %>
+  </div>
+  <div class="field">
+    <%= f.label :litres %><br />
+    <%= f.number_field :litres %>
+  </div>
+  <div class="field">
+    <%= f.label :fat %><br />
+    <%= f.text_field :fat %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :litconsume %><br />
+    <%= f.text_field :litconsume %>
+  </div>
+  <div class="field">
+    <%= f.label :litgive %><br />
+    <%= f.text_field :litgive %>
+  </div>
+  <div class="field">
+    <%= f.label :litsell %><br />
+    <%= f.text_field :litsell %>
+  </div>
+  <div class="field">
+    <%= f.label :farmer_id %><br />
+    <%= f.number_field :farmer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :whoconsa %><br />
+    <%= f.text_field :whoconsa %>
+  </div>
+  <div class="field">
+    <%= f.label :whoconsb %><br />
+    <%= f.text_field :whoconsb %>
+  </div>
+  <div class="field">
+    <%= f.label :wheresell %><br />
+    <%= f.text_field :wheresell %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
