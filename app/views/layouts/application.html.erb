@@ -5,14 +5,30 @@
   <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-  <title>Cowhub</title>
-  <%= link_to image_tag("Cowlogo.png", alt: "Rails") %>
+  <title>Cow Hub</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "Cow Hub", '#', id: "logo" %>
+          <%= link_to image_tag("Cowlogo.png", alt: "Cow Hub Logo") %>
+        <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home",    '#' %></li>
+              <li><%= link_to "Sign in",    '#' %></li>
+              <li><%= link_to "Sign up", '#' %></li>
+              <li><%= link_to "Data", '#' %></li>
+              <li><%= link_to "Vizualizations", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 <%= yield %>
 
 </body>
