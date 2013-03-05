@@ -13,6 +13,8 @@ Cowhub::Application.routes.draw do
 
   resources :farmers
 
+  root :to => 'farmers#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
