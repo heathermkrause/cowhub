@@ -2,27 +2,22 @@
 <h2> The live data repository for CARE: Strengthening the Dairy Value Chain</h2>
 
 <table>
+
   <tr>
-    <th>Name</th>
-    <th>Group</th>
-    <th>Sex</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th><%= link_to image_tag('farmerpic.png', alt: "Farmers") , url_for({:controller => 'farmers', :action => 'index'}), :class => 'quick', :remote => true %>
+</th>
+    <th><%= link_to image_tag('grouppic.png', alt: "Groups"), url_for({:controller => 'groups', :action => 'index'}), :class => 'quick', :remote => true %></th>
+    <th><%= link_to image_tag('gpfpic.png', alt: "Data") , url_for({:controller => 'gpfs', :action => 'index'}), :class => 'quick', :remote => true %></th>
+    </tr>
+    <tr>
+    <th>Farmers</th>
+    <th>Groups</th>
+    <th>Data</th>
   </tr>
 
-<% @farmers.each do |farmer| %>
-  <tr>
-    <td><%= farmer.name %></td>
-    <td><%= farmer.group_id %></td>
-    <td><%= farmer.sex %></td>
-    <td><%= link_to 'Show', farmer %></td>
-    <td><%= link_to 'Edit', edit_farmer_path(farmer) %></td>
-    <td><%= link_to 'Destroy', farmer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+
 </table>
 
 <br />
 
-<%= link_to 'New Farmer', new_farmer_path %>
+
