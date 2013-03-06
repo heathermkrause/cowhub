@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+
 /* universal */
 
 html {
@@ -8,6 +9,8 @@ html {
 
 body {
   padding-top: 240px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 section {
@@ -37,6 +40,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: #999;
 }
 
 h2 {
@@ -59,7 +63,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #FFFD700;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 13px;

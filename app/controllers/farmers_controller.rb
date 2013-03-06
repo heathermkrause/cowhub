@@ -10,6 +10,15 @@ class FarmersController < ApplicationController
     end
   end
 
+  def home
+    @farmers = Farmer.all
+
+    respond_to do |format|
+      format.html # home.html.erb
+      format.json { render json: @farmers }
+    end
+  end
+
   # GET /farmers/1
   # GET /farmers/1.json
   def show
