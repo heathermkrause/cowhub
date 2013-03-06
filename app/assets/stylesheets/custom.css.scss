@@ -1,4 +1,5 @@
-@import "bootstrap";
+@import "bootstrap-responsive";
+
 
 
 /* universal */
@@ -40,6 +41,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  font-family: 'Libre+Baskerville';
   color: #999;
 }
 
@@ -49,6 +51,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
+  font-family: 'Libre+Baskerville';
   color: #555;
 }
 
@@ -58,6 +61,7 @@ h3 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
+  font-family: 'Libre+Baskerville';
   color: #666622;
 }
 
@@ -67,6 +71,7 @@ h4 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
+  font-family: 'Libre+Baskerville';
   color: #ff7700;
 }
 
