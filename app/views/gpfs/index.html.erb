@@ -18,9 +18,28 @@ $(function() {
         }
     },
     series: [{
+        name: "Farmer 1",
         pointInterval: <%= 1.day * 1000 %>,
         pointStart: <%= 1.week.ago.to_i * 1000 %>,
-        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.ave_on(date).to_f}.inspect %>
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.farmer1.ave_on(date).to_f}.inspect %>
+    },
+    {
+        name: "Farmer 2",
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.week.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.farmer2.ave_on(date).to_f}.inspect %>
+    },
+    {
+        name: "Farmer 3",
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.week.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.farmer3.ave_on(date).to_f}.inspect %>
+    },
+     {
+        name: "Farmer 4",
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.week.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.farmer4.ave_on(date).to_f}.inspect %>
     }]
   });
 });
@@ -60,9 +79,8 @@ $(function() {
     <td><%= gpf.whoconsa %></td>
     <td><%= gpf.whoconsb %></td>
     <td><%= gpf.wheresell %></td>
-    <td><%= link_to 'Show', gpf %></td>
     <td><%= link_to 'Edit', edit_gpf_path(gpf) %></td>
-    <td><%= link_to 'Destroy', gpf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
   </tr>
 <% end %>
 </table>

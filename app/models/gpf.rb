@@ -4,6 +4,11 @@ class Gpf < ActiveRecord::Base
 
   validates :farmer_id, :presence => true
 
+  scope :farmer1, where(:farmer_id =>1)
+  scope :farmer2, where(:farmer_id =>2)
+  scope :farmer3, where(:farmer_id =>"3")
+  scope :farmer4, where(:farmer_id =>"4")
+
 
   def self.ave_on(date)
       where("date(created_at) = ?", date).average(:fat)
