@@ -18,7 +18,9 @@ $(function() {
         }
     },
     series: [{
-        data: [1,2,5,7,3]
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.week.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.ave_on(date).to_f}.inspect %>
     }]
   });
 });

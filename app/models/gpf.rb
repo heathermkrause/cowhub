@@ -3,4 +3,11 @@ class Gpf < ActiveRecord::Base
   belongs_to :farmer
 
   validates :farmer_id, :presence => true
+
+
+  def self.ave_on(date)
+      where("date(created_at) = ?", date).average(:fat)
+  end
+
 end
+
