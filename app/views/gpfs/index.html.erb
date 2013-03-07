@@ -1,5 +1,30 @@
 <h1>GPF Data</h1>
 
+<script type="text/javascript" charset="utf-8">
+$(function() {
+    new Highcharts.Chart({
+        chart: {
+        renderTo: "fat_chart"
+    },
+    title: {
+        text: "Milk Fat Content by Day"
+    },
+    xAxis: {
+        type: "datetime"
+    },
+    yAxis: {
+        title: {
+            text: "Percent"
+        }
+    },
+    series: [{
+        data: [1,2,5,7,3]
+    }]
+  });
+});
+</script>
+<div id ="fat_chart" style="width:560px; height:300px;"></div>
+
 <table class="table table-striped">
   <tr>
     <th>Cbcount</th>
