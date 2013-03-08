@@ -14,5 +14,9 @@ class Gpf < ActiveRecord::Base
       where("date(created_at) = ?", date).average(:fat)
   end
 
+   def self.avel_on(date)
+      where("date(created_at) = ?", date).average(:litres)
+  end
+
 end
 
