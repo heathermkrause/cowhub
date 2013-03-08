@@ -1,9 +1,10 @@
 class Group < ActiveRecord::Base
   attr_accessible :district, :lgid, :perfemale, :phase, :totalpart, :upazilla
-  has_many :farmers, :dependent => :destroy
-  has_many :gpfs, :through => :farmers
+
 
   validates :lgid, :presence => true
 
-
+  def farmers
+    Farmer.where(lgid: lgid)
+  end
 end
