@@ -8,6 +8,6 @@ class Farmer < ActiveRecord::Base
   before_validation :update_group_id
 
   def update_group_id
-    group_id = Group.find_by_gpfid(self.gpfid)
+    group_id = Group.find_by_lgid(self.lgid)
   end
 end
