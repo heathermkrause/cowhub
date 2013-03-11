@@ -6,8 +6,8 @@ class Gpf < ActiveRecord::Base
 
   scope :farmer1, where(:farmer_id =>1)
   scope :farmer2, where(:farmer_id =>2)
-  scope :farmer3, where(:farmer_id =>"3")
-  scope :farmer4, where(:farmer_id =>"4")
+  scope :farmer3, where(:farmer_id =>3)
+  scope :farmer4, where(:farmer_id =>4)
 
 
   def self.ave_on(date)
