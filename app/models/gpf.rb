@@ -4,10 +4,9 @@ class Gpf < ActiveRecord::Base
 
   validates :farmer_id, :presence => true
 
-  scope :farmer1, where(:farmer_id =>1)
-  scope :farmer2, where(:farmer_id =>2)
-  scope :farmer3, where(:farmer_id =>3)
-  scope :farmer4, where(:farmer_id =>4)
+  def self.for_farmer(id)
+    where(farmer_id: id)
+  end
 
 
   def self.ave_on(date)

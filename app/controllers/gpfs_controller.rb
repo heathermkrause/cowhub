@@ -2,7 +2,13 @@ class GpfsController < ApplicationController
   # GET /gpfs
   # GET /gpfs.json
   def index
+    farmer_id = params[:farmer_id]
+    if farmer_id
+      @gpfs = Gpf.for_farmer(id)
+    else
     @gpfs = Gpf.all
+  end
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -81,3 +87,9 @@ class GpfsController < ApplicationController
     end
   end
 end
+
+def by_farmer_id
+  @farmer_id =Gpf.for_farmer
+    end
+
+

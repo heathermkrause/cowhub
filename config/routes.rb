@@ -11,7 +11,8 @@ Cowhub::Application.routes.draw do
   resources :groups
 
 
-  resources :farmers
+  resources :farmers do
+      resources: gpfs
 
   root :to => 'farmers#home'
 

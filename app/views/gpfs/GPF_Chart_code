@@ -1,0 +1,75 @@
+<script type="text/javascript" charset="utf-8">
+$(function() {
+    new Highcharts.Chart({
+        chart: {
+        renderTo: "fat_chart"
+    },
+    title: {
+        text: "Milk Fat Content by Day"
+    },
+    xAxis: {
+        type: "datetime"
+    },
+    yAxis: {
+        title: {
+            text: "Percent"
+        }
+    },
+    series: [{
+
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.week.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.for_farmer(id)).ave_on(date).to_f}.inspect %>
+    }
+  });
+});
+</script>
+
+<div id ="fat_chart" style="width:400px; height:300px;"></div>
+
+<h2>GPF Data Part 2</h2>
+<script type="text/javascript" charset="utf-8">
+$(function() {
+    new Highcharts.Chart({
+        chart: {
+        renderTo: "litres_chart"
+    },
+    title: {
+        text: "Milk Production (litres) by Day"
+    },
+    xAxis: {
+        type: "datetime"
+    },
+    yAxis: {
+        title: {
+            text: "Litres"
+        }
+    },
+    series: [{
+        name: "Farmer 1",
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.week.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.farmer1.avel_on(date).to_f}.inspect %>
+    },
+    {
+        name: "Farmer 2",
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.week.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.farmer2.avel_on(date).to_f}.inspect %>
+    },
+    {
+        name: "Farmer 3",
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.day.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.farmer3.avel_on(date).to_f}.inspect %>
+    },
+     {
+        name: "Farmer 4",
+        pointInterval: <%= 1.day * 1000 %>,
+        pointStart: <%= 1.week.ago.to_i * 1000 %>,
+        data: <%= (1.week.ago.to_date..Date.today).map { |date| Gpf.farmer4.avel_on(date).to_f}.inspect %>
+    }]
+  });
+});
+</script>
+<div id ="litres_chart" style="width:400px; height:300px; margin-left:465px"></div>

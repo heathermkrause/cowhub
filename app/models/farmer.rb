@@ -5,9 +5,9 @@ class Farmer < ActiveRecord::Base
 
   validates :farmer_number, :presence => true
 
-  before_validation :update_group_id
+def fat_by_farmer
 
-  def update_group_id
-    group_id = Group.find_by_lgid(self.lgid)
-  end
+
+
+
 end
