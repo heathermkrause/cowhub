@@ -5,9 +5,9 @@ class Farmer < ActiveRecord::Base
 
   validates :farmer_number, :presence => true
 
-def fat_by_farmer
-
-
-
+def self.fatave(id,date)
+  farmer = find(id)
+  farmer.gpfs.avef_on(date)
+end
 
 end

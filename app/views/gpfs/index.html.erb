@@ -1,5 +1,32 @@
 <h2>GPF Data</h2>
 
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        new Highcharts.Chart({
+            chart: {
+                renderTo: "fat_chart"
+            },
+            title: {
+                text: "Fat Percent by Day"
+            },
+            xAxis: {
+                type: "datetime"
+            },
+            yAxis: {
+                title: {
+                    "Fat Percent"
+                }
+            },
+            series: [{
+                    data: [1,2,3,5,7]
+                }]
+         });
+    });
+</script>
+
+
+
+<div id="fat_chart" style="width:560px; height:300px;"></div>
 
 <table class="table table-striped">
   <tr>

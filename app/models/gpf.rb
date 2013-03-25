@@ -8,8 +8,7 @@ class Gpf < ActiveRecord::Base
     where(farmer_id: id)
   end
 
-
-  def self.ave_on(date)
+  def self.avef_on(date)
       where("date(created_at) = ?", date).average(:fat)
   end
 
