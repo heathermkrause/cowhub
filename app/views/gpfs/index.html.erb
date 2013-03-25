@@ -1,5 +1,42 @@
 <h2>GPF Data</h2>
 
+
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        new Highcharts.Chart({
+            chart: {
+                renderTo: "litres_chart"
+            },
+            title: {
+                text: "Litres per Day"
+            },
+            xAxis: {
+                type: "datetime"
+            },
+            yAxis: {
+                title: {
+                    text: "Fat Percent"
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                return Highcharts.dateFormat ("%B %e, %Y", this.x) + ': ' + Highcharts.numberFormat(this.y, 2);
+            }
+        },
+            series: [{
+                pointInterval: <%= 1.day * 1000 %>,
+                pointStart: <%= 4.weeks.ago.to_i * 1000 %>,
+                data: <%= (4.weeks.ago.to_date..Date.today).map { |date| Gpf.avel_on(date).to_f}.inspect %>
+            }]
+
+         });
+    });
+</script>
+
+
+<div id="litres_chart" style="width:560px; height:300px;"></div>
+
+
 <script type="text/javascript" charset="utf-8">
     $(function() {
         new Highcharts.Chart({
@@ -31,7 +68,6 @@
          });
     });
 </script>
-
 
 
 <div id="fat_chart" style="width:560px; height:300px;"></div>

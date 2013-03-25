@@ -16,5 +16,7 @@ class Gpf < ActiveRecord::Base
       where("date(created_at) = ?", date).average(:litres)
   end
 
+
+
 end
 
