@@ -4,4 +4,8 @@ class Group < ActiveRecord::Base
   has_many :farmers
   has_many :gpfs, :through => :farmers
 
+  def self.average_fat(date)
+    gpfs.where("date(created_at) = ?", date).average(:fat)
   end
+
+ end

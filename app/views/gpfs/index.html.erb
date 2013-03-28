@@ -24,9 +24,10 @@
             }
         },
             series: [{
+                name: "Group 1",
                 pointInterval: <%= 1.day * 1000 %>,
                 pointStart: <%= 4.weeks.ago.to_i * 1000 %>,
-                data: <%= (4.weeks.ago.to_date..Date.today).map { |date| Gpf.avel_on(date).to_f}.inspect %>
+                data: <%= (4.weeks.ago.to_date..Date.today).map { |q| Gpf.group.avel_on(q).to_f}.inspect %>
             }]
 
          });
