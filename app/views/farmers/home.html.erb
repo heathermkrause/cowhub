@@ -2,23 +2,26 @@
 <h2> The live data repository for CARE: Strengthening the Dairy Value Chain</h2>
 
 
-<table class="table">
-  <tr>
-    <th><%= link_to image_tag('farmerpic.png', alt: "Farmers") , url_for({:controller => 'farmers', :action => 'index'}) %>
-</th>
-    <th><%= link_to image_tag('grouppic.png', alt: "Groups"), url_for({:controller => 'groups', :action => 'index'}) %></th>
-    <th><%= link_to image_tag('gpfpic.png', alt: "Data") , url_for({:controller => 'gpfs', :action => 'index'}) %></th>
-    </tr>
-    <tr>
-    <th><%= link_to 'Farmers' , url_for({:controller => 'farmers', :action => 'index'})%></th>
-   <th><%= link_to 'Groups', url_for({:controller => 'groups', :action => 'index'}) %></th>
-    <th><%= link_to 'Data', url_for({:controller => 'gpfs', :action => 'index'}) %></th>
-  </tr>
+<div class='row'>
+    <div class = 'span4'>
+      <%= link_to image_tag('farmerpic.png', alt: "Farmers") , url_for({:controller => 'farmers', :action => 'index'}) %></div>
+       <div class = 'span4'>
+      <%= link_to image_tag('grouppic.png', alt: "Groups"), url_for({:controller => 'groups', :action => 'index'}) %></div>
+      <div class = 'span4'>
+      <%= link_to image_tag('gpfpic.png', alt: "Data") , url_for({:controller => 'gpfs', :action => 'index'}) %></div>
+</div>
 
 
+   <div class='row'>
+      <div class = 'span4'>
+      <strong><%= link_to 'Farmers' , url_for({:controller => 'farmers', :action => 'index'})%></strong></div>
+      <div class = 'span4'>
+      <strong><%= link_to 'Groups', url_for({:controller => 'groups', :action => 'index'}) %></strong></div>
+      <div class = 'span4'>
+       <strong> <%= link_to 'Data', url_for({:controller => 'gpfs', :action => 'index'}) %></strong></div>
+      </div>
+    </div>
 
-</table>
 
-<br />
 
 
